@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"time"
 
-	notifications "github.com/ipfs/go-bitswap/notifications"
+	notifications "github.com/dms3-fs/go-bitswap/notifications"
 
 	lru "github.com/hashicorp/golang-lru"
-	blocks "github.com/ipfs/go-block-format"
-	cid "github.com/ipfs/go-cid"
-	logging "github.com/ipfs/go-log"
-	loggables "github.com/libp2p/go-libp2p-loggables"
-	peer "github.com/libp2p/go-libp2p-peer"
+	blocks "github.com/dms3-fs/go-block-format"
+	cid "github.com/dms3-fs/go-cid"
+	logging "github.com/dms3-fs/go-log"
+	loggables "github.com/dms3-p2p/go-p2p-loggables"
+	peer "github.com/dms3-p2p/go-p2p-peer"
 )
 
 const activeWantsLimit = 16

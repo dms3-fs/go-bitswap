@@ -6,13 +6,13 @@ import (
 	"sync"
 	"time"
 
-	bsmsg "github.com/ipfs/go-bitswap/message"
-	wl "github.com/ipfs/go-bitswap/wantlist"
+	bsmsg "github.com/dms3-fs/go-bitswap/message"
+	wl "github.com/dms3-fs/go-bitswap/wantlist"
 
-	blocks "github.com/ipfs/go-block-format"
-	bstore "github.com/ipfs/go-ipfs-blockstore"
-	logging "github.com/ipfs/go-log"
-	peer "github.com/libp2p/go-libp2p-peer"
+	blocks "github.com/dms3-fs/go-block-format"
+	bstore "github.com/dms3-fs/go-fs-blockstore"
+	logging "github.com/dms3-fs/go-log"
+	peer "github.com/dms3-p2p/go-p2p-peer"
 )
 
 // TODO consider taking responsibility for other types of requests. For

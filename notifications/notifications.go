@@ -5,8 +5,8 @@ import (
 	"sync"
 
 	pubsub "github.com/gxed/pubsub"
-	blocks "github.com/ipfs/go-block-format"
-	cid "github.com/ipfs/go-cid"
+	blocks "github.com/dms3-fs/go-block-format"
+	cid "github.com/dms3-fs/go-cid"
 )
 
 const bufferSize = 16

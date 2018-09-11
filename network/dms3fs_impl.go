@@ -6,26 +6,26 @@ import (
 	"io"
 	"time"
 
-	bsmsg "github.com/ipfs/go-bitswap/message"
+	bsmsg "github.com/dms3-fs/go-bitswap/message"
 
 	ggio "github.com/gogo/protobuf/io"
-	cid "github.com/ipfs/go-cid"
-	logging "github.com/ipfs/go-log"
-	host "github.com/libp2p/go-libp2p-host"
-	ifconnmgr "github.com/libp2p/go-libp2p-interface-connmgr"
-	inet "github.com/libp2p/go-libp2p-net"
-	peer "github.com/libp2p/go-libp2p-peer"
-	pstore "github.com/libp2p/go-libp2p-peerstore"
-	routing "github.com/libp2p/go-libp2p-routing"
-	ma "github.com/multiformats/go-multiaddr"
+	cid "github.com/dms3-fs/go-cid"
+	logging "github.com/dms3-fs/go-log"
+	host "github.com/dms3-p2p/go-p2p-host"
+	ifconnmgr "github.com/dms3-p2p/go-p2p-interface-connmgr"
+	inet "github.com/dms3-p2p/go-p2p-net"
+	peer "github.com/dms3-p2p/go-p2p-peer"
+	pstore "github.com/dms3-p2p/go-p2p-peerstore"
+	routing "github.com/dms3-p2p/go-p2p-routing"
+	ma "github.com/dms3-mft/go-multiaddr"
 )
 
 var log = logging.Logger("bitswap_network")
 
 var sendMessageTimeout = time.Minute * 10
 
-// NewFromIpfsHost returns a BitSwapNetwork supported by underlying IPFS host
-func NewFromIpfsHost(host host.Host, r routing.ContentRouting) BitSwapNetwork {
+// NewFromDms3FsHost returns a BitSwapNetwork supported by underlying DMS3FS host
+func NewFromDms3FsHost(host host.Host, r routing.ContentRouting) BitSwapNetwork {
 	bitswapNetwork := impl{
 		host:    host,
 		routing: r,
@@ -39,7 +39,7 @@ func NewFromIpfsHost(host host.Host, r routing.ContentRouting) BitSwapNetwork {
 	return &bitswapNetwork
 }
 
-// impl transforms the ipfs network interface, which sends and receives
+// impl transforms the dms3fs network interface, which sends and receives
 // NetMessage objects, into the bitswap network interface.
 type impl struct {
 	host    host.Host
@@ -123,7 +123,7 @@ func (bsnet *impl) SendMessage(
 		s.Reset()
 		return err
 	}
-	// TODO(https://github.com/libp2p/go-libp2p-net/issues/28): Avoid this goroutine.
+	// TODO(https://github.com/dms3-p2p/go-p2p-net/issues/28): Avoid this goroutine.
 	go inet.AwaitEOF(s)
 	return s.Close()
 

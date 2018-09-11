@@ -1,10 +1,10 @@
 {
   "author": "why",
   "bugs": {
-    "url": "https://github.com/ipfs/go-bitswap"
+    "url": "https://github.com/dms3-fs/go-bitswap"
   },
   "gx": {
-    "dvcsimport": "github.com/ipfs/go-bitswap"
+    "dvcsimport": "github.com/dms3-fs/go-bitswap"
   },
   "gxDependencies": [
     {
@@ -193,4 +193,3 @@
   "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
   "version": "1.0.10"
 }
-

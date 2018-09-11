@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"testing"
 
-	pb "github.com/ipfs/go-bitswap/message/pb"
+	pb "github.com/dms3-fs/go-bitswap/message/pb"
 
-	blocks "github.com/ipfs/go-block-format"
-	cid "github.com/ipfs/go-cid"
-	u "github.com/ipfs/go-ipfs-util"
+	blocks "github.com/dms3-fs/go-block-format"
+	cid "github.com/dms3-fs/go-cid"
+	u "github.com/dms3-fs/go-fs-util"
 )
 
 func mkFakeCid(s string) *cid.Cid {

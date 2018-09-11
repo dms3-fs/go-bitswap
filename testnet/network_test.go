@@ -5,14 +5,14 @@ import (
 	"sync"
 	"testing"
 
-	bsmsg "github.com/ipfs/go-bitswap/message"
-	bsnet "github.com/ipfs/go-bitswap/network"
+	bsmsg "github.com/dms3-fs/go-bitswap/message"
+	bsnet "github.com/dms3-fs/go-bitswap/network"
 
-	blocks "github.com/ipfs/go-block-format"
-	delay "github.com/ipfs/go-ipfs-delay"
-	mockrouting "github.com/ipfs/go-ipfs-routing/mock"
-	peer "github.com/libp2p/go-libp2p-peer"
-	testutil "github.com/libp2p/go-testutil"
+	blocks "github.com/dms3-fs/go-block-format"
+	delay "github.com/dms3-fs/go-fs-delay"
+	mockrouting "github.com/dms3-fs/go-fs-routing/mock"
+	peer "github.com/dms3-p2p/go-p2p-peer"
+	testutil "github.com/dms3-p2p/go-testutil"
 )
 
 func TestSendMessageAsyncButWaitForResponse(t *testing.T) {

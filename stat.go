@@ -3,7 +3,7 @@ package bitswap
 import (
 	"sort"
 
-	cid "github.com/ipfs/go-cid"
+	cid "github.com/dms3-fs/go-cid"
 )
 
 type Stat struct {

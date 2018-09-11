@@ -3,20 +3,20 @@ package network
 import (
 	"context"
 
-	bsmsg "github.com/ipfs/go-bitswap/message"
+	bsmsg "github.com/dms3-fs/go-bitswap/message"
 
-	cid "github.com/ipfs/go-cid"
-	ifconnmgr "github.com/libp2p/go-libp2p-interface-connmgr"
-	peer "github.com/libp2p/go-libp2p-peer"
-	protocol "github.com/libp2p/go-libp2p-protocol"
+	cid "github.com/dms3-fs/go-cid"
+	ifconnmgr "github.com/dms3-p2p/go-p2p-interface-connmgr"
+	peer "github.com/dms3-p2p/go-p2p-peer"
+	protocol "github.com/dms3-p2p/go-p2p-protocol"
 )
 
 var (
 	// These two are equivalent, legacy
-	ProtocolBitswapOne    protocol.ID = "/ipfs/bitswap/1.0.0"
-	ProtocolBitswapNoVers protocol.ID = "/ipfs/bitswap"
+	ProtocolBitswapOne    protocol.ID = "/dms3fs/bitswap/1.0.0"
+	ProtocolBitswapNoVers protocol.ID = "/dms3fs/bitswap"
 
-	ProtocolBitswap protocol.ID = "/ipfs/bitswap/1.1.0"
+	ProtocolBitswap protocol.ID = "/dms3fs/bitswap/1.1.0"
 )
 
 // BitSwapNetwork provides network connectivity for BitSwap sessions

@@ -1,4 +1,4 @@
-// package bitswap implements the IPFS exchange interface with the BitSwap
+// package bitswap implements the DMS3FS exchange interface with the BitSwap
 // bilateral exchange protocol.
 package bitswap
 
@@ -10,22 +10,22 @@ import (
 	"sync/atomic"
 	"time"
 
-	decision "github.com/ipfs/go-bitswap/decision"
-	bsmsg "github.com/ipfs/go-bitswap/message"
-	bsnet "github.com/ipfs/go-bitswap/network"
-	notifications "github.com/ipfs/go-bitswap/notifications"
+	decision "github.com/dms3-fs/go-bitswap/decision"
+	bsmsg "github.com/dms3-fs/go-bitswap/message"
+	bsnet "github.com/dms3-fs/go-bitswap/network"
+	notifications "github.com/dms3-fs/go-bitswap/notifications"
 
-	blocks "github.com/ipfs/go-block-format"
-	cid "github.com/ipfs/go-cid"
-	blockstore "github.com/ipfs/go-ipfs-blockstore"
-	delay "github.com/ipfs/go-ipfs-delay"
-	exchange "github.com/ipfs/go-ipfs-exchange-interface"
-	flags "github.com/ipfs/go-ipfs-flags"
-	logging "github.com/ipfs/go-log"
-	metrics "github.com/ipfs/go-metrics-interface"
+	blocks "github.com/dms3-fs/go-block-format"
+	cid "github.com/dms3-fs/go-cid"
+	blockstore "github.com/dms3-fs/go-fs-blockstore"
+	delay "github.com/dms3-fs/go-fs-delay"
+	exchange "github.com/dms3-fs/go-fs-exchange-interface"
+	flags "github.com/dms3-fs/go-fs-flags"
+	logging "github.com/dms3-fs/go-log"
+	metrics "github.com/dms3-fs/go-metrics-interface"
 	process "github.com/jbenet/goprocess"
 	procctx "github.com/jbenet/goprocess/context"
-	peer "github.com/libp2p/go-libp2p-peer"
+	peer "github.com/dms3-p2p/go-p2p-peer"
 )
 
 var log = logging.Logger("bitswap")
@@ -71,7 +71,7 @@ func New(parent context.Context, network bsnet.BitSwapNetwork,
 
 	// important to use provided parent context (since it may include important
 	// loggable data). It's probably not a good idea to allow bitswap to be
-	// coupled to the concerns of the ipfs daemon in this way.
+	// coupled to the concerns of the dms3fs daemon in this way.
 	//
 	// FIXME(btc) Now that bitswap manages itself using a process, it probably
 	// shouldn't accept a context anymore. Clients should probably use Close()

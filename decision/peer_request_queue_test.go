@@ -8,10 +8,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ipfs/go-bitswap/wantlist"
-	cid "github.com/ipfs/go-cid"
-	u "github.com/ipfs/go-ipfs-util"
-	"github.com/libp2p/go-testutil"
+	"github.com/dms3-fs/go-bitswap/wantlist"
+	cid "github.com/dms3-fs/go-cid"
+	u "github.com/dms3-fs/go-fs-util"
+	"github.com/dms3-p2p/go-testutil"
 )
 
 func TestPushPop(t *testing.T) {

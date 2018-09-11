@@ -6,17 +6,17 @@ import (
 	"sync"
 	"time"
 
-	bsmsg "github.com/ipfs/go-bitswap/message"
-	bsnet "github.com/ipfs/go-bitswap/network"
+	bsmsg "github.com/dms3-fs/go-bitswap/message"
+	bsnet "github.com/dms3-fs/go-bitswap/network"
 
-	cid "github.com/ipfs/go-cid"
-	delay "github.com/ipfs/go-ipfs-delay"
-	mockrouting "github.com/ipfs/go-ipfs-routing/mock"
-	logging "github.com/ipfs/go-log"
-	ifconnmgr "github.com/libp2p/go-libp2p-interface-connmgr"
-	peer "github.com/libp2p/go-libp2p-peer"
-	routing "github.com/libp2p/go-libp2p-routing"
-	testutil "github.com/libp2p/go-testutil"
+	cid "github.com/dms3-fs/go-cid"
+	delay "github.com/dms3-fs/go-fs-delay"
+	mockrouting "github.com/dms3-fs/go-fs-routing/mock"
+	logging "github.com/dms3-fs/go-log"
+	ifconnmgr "github.com/dms3-p2p/go-p2p-interface-connmgr"
+	peer "github.com/dms3-p2p/go-p2p-peer"
+	routing "github.com/dms3-p2p/go-p2p-routing"
+	testutil "github.com/dms3-p2p/go-testutil"
 )
 
 var log = logging.Logger("bstestnet")
@@ -120,7 +120,7 @@ type networkClient struct {
 	local peer.ID
 	bsnet.Receiver
 	network *network
-	routing routing.IpfsRouting
+	routing routing.Dms3FsRouting
 }
 
 func (nc *networkClient) SendMessage(
@@ -135,7 +135,7 @@ func (nc *networkClient) FindProvidersAsync(ctx context.Context, k *cid.Cid, max
 
 	// NB: this function duplicates the PeerInfo -> ID transformation in the
 	// bitswap network adapter. Not to worry. This network client will be
-	// deprecated once the ipfsnet.Mock is added. The code below is only
+	// deprecated once the dms3fsnet.Mock is added. The code below is only
 	// temporary.
 
 	out := make(chan peer.ID)

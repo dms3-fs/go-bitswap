@@ -5,14 +5,14 @@ import (
 	"sync"
 	"time"
 
-	engine "github.com/ipfs/go-bitswap/decision"
-	bsmsg "github.com/ipfs/go-bitswap/message"
-	bsnet "github.com/ipfs/go-bitswap/network"
-	wantlist "github.com/ipfs/go-bitswap/wantlist"
+	engine "github.com/dms3-fs/go-bitswap/decision"
+	bsmsg "github.com/dms3-fs/go-bitswap/message"
+	bsnet "github.com/dms3-fs/go-bitswap/network"
+	wantlist "github.com/dms3-fs/go-bitswap/wantlist"
 
-	cid "github.com/ipfs/go-cid"
-	metrics "github.com/ipfs/go-metrics-interface"
-	peer "github.com/libp2p/go-libp2p-peer"
+	cid "github.com/dms3-fs/go-cid"
+	metrics "github.com/dms3-fs/go-metrics-interface"
+	peer "github.com/dms3-p2p/go-p2p-peer"
 )
 
 type WantManager struct {

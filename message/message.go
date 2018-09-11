@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"io"
 
-	pb "github.com/ipfs/go-bitswap/message/pb"
-	wantlist "github.com/ipfs/go-bitswap/wantlist"
-	blocks "github.com/ipfs/go-block-format"
+	pb "github.com/dms3-fs/go-bitswap/message/pb"
+	wantlist "github.com/dms3-fs/go-bitswap/wantlist"
+	blocks "github.com/dms3-fs/go-block-format"
 
 	ggio "github.com/gogo/protobuf/io"
-	cid "github.com/ipfs/go-cid"
-	inet "github.com/libp2p/go-libp2p-net"
+	cid "github.com/dms3-fs/go-cid"
+	inet "github.com/dms3-p2p/go-p2p-net"
 )
 
 // TODO move message.go into the bitswap package

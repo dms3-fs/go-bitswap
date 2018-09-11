@@ -9,14 +9,14 @@ import (
 	"sync"
 	"testing"
 
-	message "github.com/ipfs/go-bitswap/message"
+	message "github.com/dms3-fs/go-bitswap/message"
 
-	blocks "github.com/ipfs/go-block-format"
-	ds "github.com/ipfs/go-datastore"
-	dssync "github.com/ipfs/go-datastore/sync"
-	blockstore "github.com/ipfs/go-ipfs-blockstore"
-	peer "github.com/libp2p/go-libp2p-peer"
-	testutil "github.com/libp2p/go-testutil"
+	blocks "github.com/dms3-fs/go-block-format"
+	ds "github.com/dms3-fs/go-datastore"
+	dssync "github.com/dms3-fs/go-datastore/sync"
+	blockstore "github.com/dms3-fs/go-fs-blockstore"
+	peer "github.com/dms3-p2p/go-p2p-peer"
+	testutil "github.com/dms3-p2p/go-testutil"
 )
 
 type peerAndEngine struct {

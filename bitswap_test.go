@@ -8,19 +8,19 @@ import (
 	"testing"
 	"time"
 
-	decision "github.com/ipfs/go-bitswap/decision"
-	tn "github.com/ipfs/go-bitswap/testnet"
+	decision "github.com/dms3-fs/go-bitswap/decision"
+	tn "github.com/dms3-fs/go-bitswap/testnet"
 
-	blocks "github.com/ipfs/go-block-format"
-	cid "github.com/ipfs/go-cid"
-	detectrace "github.com/ipfs/go-detect-race"
-	blockstore "github.com/ipfs/go-ipfs-blockstore"
-	blocksutil "github.com/ipfs/go-ipfs-blocksutil"
-	delay "github.com/ipfs/go-ipfs-delay"
-	mockrouting "github.com/ipfs/go-ipfs-routing/mock"
-	p2ptestutil "github.com/libp2p/go-libp2p-netutil"
-	tu "github.com/libp2p/go-testutil"
-	travis "github.com/libp2p/go-testutil/ci/travis"
+	blocks "github.com/dms3-fs/go-block-format"
+	cid "github.com/dms3-fs/go-cid"
+	detectrace "github.com/dms3-fs/go-detect-race"
+	blockstore "github.com/dms3-fs/go-fs-blockstore"
+	blocksutil "github.com/dms3-fs/go-fs-blocksutil"
+	delay "github.com/dms3-fs/go-fs-delay"
+	mockrouting "github.com/dms3-fs/go-fs-routing/mock"
+	p2ptestutil "github.com/dms3-p2p/go-p2p-netutil"
+	tu "github.com/dms3-p2p/go-testutil"
+	travis "github.com/dms3-p2p/go-testutil/ci/travis"
 )
 
 // FIXME the tests are really sensitive to the network delay. fix them to work

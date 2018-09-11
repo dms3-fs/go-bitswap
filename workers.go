@@ -6,13 +6,13 @@ import (
 	"sync"
 	"time"
 
-	bsmsg "github.com/ipfs/go-bitswap/message"
+	bsmsg "github.com/dms3-fs/go-bitswap/message"
 
-	cid "github.com/ipfs/go-cid"
-	logging "github.com/ipfs/go-log"
+	cid "github.com/dms3-fs/go-cid"
+	logging "github.com/dms3-fs/go-log"
 	process "github.com/jbenet/goprocess"
 	procctx "github.com/jbenet/goprocess/context"
-	peer "github.com/libp2p/go-libp2p-peer"
+	peer "github.com/dms3-p2p/go-p2p-peer"
 )
 
 var TaskWorkerCount = 8

@@ -5,11 +5,11 @@ import (
 	"math"
 	"testing"
 
-	"github.com/ipfs/go-bitswap/wantlist"
-	cid "github.com/ipfs/go-cid"
-	u "github.com/ipfs/go-ipfs-util"
-	"github.com/libp2p/go-libp2p-peer"
-	"github.com/libp2p/go-testutil"
+	"github.com/dms3-fs/go-bitswap/wantlist"
+	cid "github.com/dms3-fs/go-cid"
+	u "github.com/dms3-fs/go-fs-util"
+	"github.com/dms3-p2p/go-p2p-peer"
+	"github.com/dms3-p2p/go-testutil"
 )
 
 // FWIW: At the time of this commit, including a timestamp in task increases

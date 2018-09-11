@@ -6,7 +6,7 @@ import (
 	"sort"
 	"sync"
 
-	cid "github.com/ipfs/go-cid"
+	cid "github.com/dms3-fs/go-cid"
 )
 
 type ThreadSafe struct {
